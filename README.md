@@ -47,7 +47,7 @@ USB定制在15个端口内，只去除了主板神光USB，MacOS 反正无法使
 
 8、使用 typec 设备插拔对于接口
 
-9、删除其他未使用接口和不需要使用的接口保持在15个以内
+9、选中删除其他未使用接口和不需要使用的接口保持在15个以内
 
 10、点击 hackintool 的导出并将 USBPorts.kext 文件替换，并关闭 XhciPortLimit 取消 USBInjectAll 与 SSDT-EC-USBX-DESKTOP 加载即可
 
