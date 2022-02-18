@@ -43,7 +43,7 @@ USB定制在15个端口内，只去除了主板神光USB，MacOS 反正无法使
 
 # 目录浏览
 
-```aidl
+```
 └── EFI
     ├── BOOT
     │     └── BOOTx64.efi
