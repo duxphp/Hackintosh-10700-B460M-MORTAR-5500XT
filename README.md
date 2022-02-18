@@ -34,7 +34,7 @@ USB定制在15个端口内，只去除了主板神光USB，MacOS 反正无法使
 | CPU       | intel i7 10700                              |
 | 主板        | MSI MAG B460M MORTAR（无 WiFi）                |
 | 显卡        | 华擎 AMD Radeon RX 5500 XT Challenger D 8G OC |
-| 内存        | 美商海盗船(复仇者LPX系列) 3200MHz 16G * 2             |
+| 内存        | 金士顿 3200MHz 16G * 2                         |
 | SSD       | 铠侠 RC10 500G NVME SSD                       |
 | 机箱        | 蓝宝石NITRO M01 银角大王 (前面板双 USB 3.0)            |
 | 电源        | 长城金牌 V5 500W 全模组                            |
