@@ -176,10 +176,10 @@
         <dict>
             <key>Add</key>
             <dict>
-                <key>PciRoot(0x0)/Pci(0x1b,0x0)</key>
+                <key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
                 <dict>
                     <key>layout-id</key>
-                    <data>AQAAAA==</data>
+                    <data>CwAAAA==</data>
                 </dict>
                 <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
                 <dict>
@@ -866,7 +866,7 @@
                     <key>SystemAudioVolume</key>
                     <data>Rg==</data>
                     <key>boot-args</key>
-                    <string>igfxfw=2 shikigva=80 agdpmod=pikera alcid=1 brcmfx-country=#a</string>
+                    <string>igfxfw=2 shikigva=80 agdpmod=pikera brcmfx-country=#a</string>
                     <key>csr-active-config</key>
                     <data>5wMAAA==</data>
                     <key>prev-lang:kbd</key>
@@ -1008,7 +1008,7 @@
                 <key>AudioDevice</key>
                 <string>PciRoot(0x0)/Pci(0x1b,0x0)</string>
                 <key>AudioOutMask</key>
-                <integer>1</integer>
+                <integer>11</integer>
                 <key>AudioSupport</key>
                 <false/>
                 <key>DisconnectHda</key>
