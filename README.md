@@ -87,6 +87,7 @@ USB定制在15个端口内，只去除了主板神光USB，MacOS 反正无法使
 
 2022-02-24
 加入 BlueToolFixup.kext 补丁，无论 BCM 或 Intel 网卡 MACOS 12 需要该驱动解决蓝牙睡醒等问题
+更换USB定制为 USBMap.kext
 
 2022-02-19
 注入声卡id为11，取消启动声卡注入
@@ -95,27 +96,3 @@ USB定制在15个端口内，只去除了主板神光USB，MacOS 反正无法使
 基础版本，基于 OC 0.7.8
 
 
-
-# USB 定制
-
-如果为不同机箱需要自行定制USB驱动
-
-1、加载 SSDT-EC-USBX-DESKTOP.aml ACPI 补丁 USBInjectAll.kext 驱动 并关闭 XhciPortLimit
-
-2、重启进入系统使用 hackintool - USB - 清除所有端口并刷新端口
-
-3、使用 USB2.0 设备挨个插拔主机所有的USB 端口观察 hackintool 中的 USB 已插拔的 HSXX 端口 变为绿色
-
-4、更改绿色的端口为正确的连接器 一般为 USB2或内置(internal)
-
-5、修改配置并打开 XhciPortLimit 选项重启进入系统
-
-6、继续打开 hackintool - USB (不要刷新和清除)
-
-7、使用 USB3.0 设备挨个插拔主机所有USB3.0端口，已插拔的 SSXX 端口 变为绿色
-
-8、使用 typec 设备插拔对于接口
-
-9、选中删除其他未使用接口和不需要使用的接口保持在15个以内
-
-10、点击 hackintool 的导出并将 USBPorts.kext 文件替换，并关闭 XhciPortLimit 取消 USBInjectAll 与 SSDT-EC-USBX-DESKTOP 加载即可
