@@ -83,8 +83,8 @@ USB定制在15个端口内，只去除了主板神光USB，MacOS 反正无法使
 
 ```
 
-# 更新记录
 
+# 更新记录
 2022-02-24
 加入 BlueToolFixup.kext 补丁，无论 BCM 或 Intel 网卡 MACOS 12 需要该驱动解决蓝牙睡醒等问题
 更换USB定制为 USBMap.kext
