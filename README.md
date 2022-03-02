@@ -1,12 +1,10 @@
 # Hackintosh-10700-B460M-MORTAR-5500XT
 
-适用于 10700 + B460M迫击炮(无wifi) + (集显 / RX5x0 / RX5X00XT / RX 6X00) 黑苹果引导文件 
+适用于 10700 + B460M迫击炮(无wifi) + 5500XT 黑苹果引导文件 
 
 基于 OpenCore 0.7.8 版本，机型 Imac 20,1，系统 MacOS 12.2.1
 
 本 EFI 参考其他基于 B460M 引导与查阅资料，去除不必要的驱动并更新到最新版本
-
-集成 5X00XT 显卡温度显示传感器驱动
 
 USB定制在15个端口内，只去除了主板神光USB，MacOS 反正无法使用
 
@@ -19,8 +17,6 @@ USB定制在15个端口内，只去除了主板神光USB，MacOS 反正无法使
 本引导默认适用于i7 10700 CPU，i5与i9 请自行更换集显加速ID代码
 
 集显用户如果睡眠有问题请将机型改为 macmini 并重新定制USB
-
-配置含有3个文件，默认为集显其他显卡请自行替换
 
 经实机测试 5X00XT等显卡不需要加入独显代码注入或ACPI方式的任何注入，MacOS12.2.1下实际跑分并无多大差别
 
@@ -35,62 +31,23 @@ USB定制在15个端口内，只去除了主板神光USB，MacOS 反正无法使
 
 # 本机配置
 
-| 配置        | 型号                                                            |
-|-----------|---------------------------------------------------------------|
-| CPU       | intel i7 10700                                                |
-| 主板        | MSI MAG B460M MORTAR（无 WiFi）                                  |
-| 显卡        | ~~华擎 AMD Radeon RX 5500 XT Challenger D 8G OC~~ 已更换为 技嘉 RX560 |
-| 内存        | 金士顿 3200MHz 16G * 2                                           |
-| SSD       | 铠侠 RC10 500G NVME SSD                                         |
-| 机箱        | 蓝宝石NITRO M01 银角大王 (前面板双 USB 3.0)                              |
-| 电源        | 长城金牌 V5 500W 全模组                                              |
-| CPU 风扇    | 利民 AS120 Plus                                                 |
-| WiFi + 蓝牙 | BCM94360CD (PCI+USB转接卡)                                       |
-
-
-# 目录浏览
-
-```
-└── EFI
-    ├── BOOT
-    │     └── BOOTx64.efi
-    └── OC
-        ├── ACPI
-        │     ├── SSDT-AWAC.aml
-        │     └── SSDT-PLUG.aml
-        ├── Drivers
-        │     ├── AudioDxe.efi
-        │     ├── HfsPlus.efi
-        │     ├── OpenCanopy.efi
-        │     └── OpenRuntime.efi
-        ├── Kexts
-        │     ├── AppleALC.kext
-        │     ├── Lilu.kext
-        │     ├── LucyRTL8125Ethernet.kext
-        │     ├── NVMeFix.kext
-        │     ├── RadeonSensor.kext
-        │     ├── SMCProcessor.kext
-        │     ├── SMCRadeonGPU.kext
-        │     ├── SMCSuperIO.kext
-        │     ├── USBPorts.kext
-        │     ├── VirtualSMC.kext
-        │     ├── WhateverGreen.kext
-        │     ├── AirportBrcmFixup.kext
-        │     └── XHCI-unsupported.kext
-        ├── OpenCore.efi
-        ├── Resources
-        │     ├── Audio
-        │     ├── Font
-        │     ├── Image
-        │     └── Label
-        ├── Tools
-        │     └── OpenShell.efi
-        └── config.plist
-
-```
+| 配置        | 型号                                                          |
+|-----------|-------------------------------------------------------------|
+| CPU       | intel i7 10700                                              |
+| 主板        | MSI MAG B460M MORTAR（无 WiFi）                                |
+| 显卡        | 华擎 AMD Radeon RX 5500 XT Challenger D 8G OC |
+| 内存        | 金士顿 3200MHz 16G * 2                                         |
+| SSD       | 铠侠 RC10 500G NVME SSD                                       |
+| 机箱        | 蓝宝石NITRO M01 银角大王 (前面板双 USB 3.0)                            |
+| 电源        | 长城金牌 V5 500W 全模组                                            |
+| CPU 风扇    | 利民 AS120 Plus                                               |
+| WiFi + 蓝牙 | BCM94360CD (PCI+USB转接卡)                                     |
 
 
 # 更新记录
+
+2022-03-02
+删除非必要驱动，重新恢复bios后usb定制失效，重新引入ACPI，只保留5500xt版本
 
 2022-02-28
 增加 rx5x0显卡配置，增加独显配置，默认为集显配置
